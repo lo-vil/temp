@@ -1,3 +1,5 @@
+## brocoli (Louis Villemure)
+
 ### 1
 
 Method:
@@ -26,9 +28,11 @@ c.
 
 a.
 
-Ajust number of servings -> Press Ok button
+The following GUI test is the same for all test cases, (only the scaling factor and number of servings will vary)
 
-Expected outcome is that the ingredients quantity is adjusted for all ingredients or "not adjusted" will be printed next to the ingredient quantity
+Click on recipe -> Click on display recipe button -> Click on settings to change servings and scaling factor (equaliser icon) -> Ajust scaling factor and number of serving -> Press Ok button
+
+Expected outcome is that the ingredients quantity is adjusted for all ingredients or "not adjusted" will be printed next to the ingredient quantity.
 
 ### 3
 
