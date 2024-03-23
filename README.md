@@ -34,9 +34,15 @@ Expected outcome is that the ingredients quantity is adjusted for all ingredient
 
 a.
 
-![EventFlowDiagram drawio](https://github.com/lo-vil/temp/assets/94203138/24cb472e-1df3-4ace-aa35-57c835aa461a)
+![EventFlowDiagram drawio (1)](https://github.com/lo-vil/temp/assets/94203138/9ea63275-075f-4739-8cad-574d6fd339ec)
 
 b.
+
+![Screenshot 2024-03-22 at 9 37 43 PM](https://github.com/lo-vil/temp/assets/94203138/23fb3e0e-8374-4652-b6b9-c1cc2f597f2b)
+
+![Screenshot 2024-03-22 at 9 37 48 PM](https://github.com/lo-vil/temp/assets/94203138/7bc06caf-d160-4bdb-81b4-f20ac41e997d)
+
+![Screenshot 2024-03-22 at 9 37 54 PM](https://github.com/lo-vil/temp/assets/94203138/687a5878-af1d-4189-88c3-aedfdddfe430)
 
 
 ### 4
@@ -48,55 +54,13 @@ a.
 
 b. 
 
-#### oldImageName is null and imageHasBeenSet() is true
+True: (oldImage == null) and (imageHasBeenSet() == true)
 
-* Preconditions:
-  
-  
-Ensure that the application is running and accessible.
-
-Load a recipe with an old image and ensure oldImageName is null initially.
-
-Set a new image for the recipe.
+False: (oldImage != null) or (imageHasBeenSet() != true)
 
 
-* Steps:
+2 Clauses : 
+* oldImage == null 
+* imageHasBeenSet()
 
-
-Trigger the method removeOldImageAndCleanUpAnyTemporaryImages() by simulating user interaction (e.g., clicking a button or performing an action that calls this method).
-
-
-* Expected Outcome:
-
-
-cleanUpTemporaryImage() is called.
-
-Since oldImageName is null and imageHasBeenSet() returns true, oldImageName should be updated with the current image name (recipe.getImageName()).
-
-
-<br />
-
-#### oldImageName is not null or imageHasBeenSet() is false
-
-* Preconditions:
-  
-  
-Ensure that the application is running and accessible.
-  
-Load a recipe with an old image and ensure oldImageName is not null initially.
-  
-Ensure that imageHasBeenSet() returns false.
-
-  
-* Steps:
-
-
-Trigger the method removeOldImageAndCleanUpAnyTemporaryImages() by simulating user interaction (e.g., clicking a button or performing an action that calls this method).
-
-
-* Expected Outcome:
-
-
-cleanUpTemporaryImage() is called.
-
-Since either oldImageName is not null or imageHasBeenSet() returns false, oldImageName should not be updated, and the method should exit without updating oldImageName.
+This method can't be tested at the GUI level, meaning no matter the interaction with the UI, this method behaves the same way. It ensures that the clean up method for getting rid of the old image when a new image is uploaded worked.
