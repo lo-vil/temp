@@ -48,3 +48,55 @@ a.
 
 b. 
 
+#### oldImageName is null and imageHasBeenSet() is true
+
+* Preconditions:
+  
+  
+Ensure that the application is running and accessible.
+
+Load a recipe with an old image and ensure oldImageName is null initially.
+
+Set a new image for the recipe.
+
+
+* Steps:
+
+
+Trigger the method removeOldImageAndCleanUpAnyTemporaryImages() by simulating user interaction (e.g., clicking a button or performing an action that calls this method).
+
+
+* Expected Outcome:
+
+
+cleanUpTemporaryImage() is called.
+
+Since oldImageName is null and imageHasBeenSet() returns true, oldImageName should be updated with the current image name (recipe.getImageName()).
+
+
+<br />
+
+#### oldImageName is not null or imageHasBeenSet() is false
+
+* Preconditions:
+  
+  
+Ensure that the application is running and accessible.
+  
+Load a recipe with an old image and ensure oldImageName is not null initially.
+  
+Ensure that imageHasBeenSet() returns false.
+
+  
+* Steps:
+
+
+Trigger the method removeOldImageAndCleanUpAnyTemporaryImages() by simulating user interaction (e.g., clicking a button or performing an action that calls this method).
+
+
+* Expected Outcome:
+
+
+cleanUpTemporaryImage() is called.
+
+Since either oldImageName is not null or imageHasBeenSet() returns false, oldImageName should not be updated, and the method should exit without updating oldImageName.
